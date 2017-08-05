@@ -7,7 +7,7 @@
 // OKAY, TOO CONVOLUTED, CUT OUT THE DIFFERENT FAMILIES & TYPO parts.
 
 function Start_Jack_1(){
-	
+
 	/////// SET UP SCENE ////////
 
 	Show("background","bedroom");
@@ -18,18 +18,18 @@ function Start_Jack_1(){
 
 	/////////////////////////////
 
-	j("And when he simply announces,");
-	j("'I bought the airline.'");
-	j("That was positively priceless!");
-	n("Is that what he said?");
-	n("I missed out what everyone in the theater was laughing about.");
-	j("You either need subtitles, or to clean your ears more often.");
-	j("So how did you interpret the ending?");
+	j("Hey, did you watch the STAR WALL AND CATS?");
+	j("It is the famous movie made by Dr. Howard.");
+	j("And guess who made the music?");
+	n("You mentioned it thousand time.");
+	n("It made by Larry Norhost.");
+	j("You’re my best friend, bro.");
+	j("Did you know the ending?");
 
 	Choose({
-		"It was totally all a dream.": Inception_Dream,
-		"He's got to be back in the real world!": Inception_Awake,
-		"Doesn't matter. Cobbs just finally let go.": Inception_Neither
+		"I have no mood to talk about that.": Inception_Dream,
+		"Cats become the host of the whole world!": Inception_Awake,
+		"Doesn't matter. My mom doesn’t let me watch.": Inception_Neither
 	});
 
 }
@@ -39,24 +39,24 @@ function Inception_Dream(message){
 	$.inception_answer = "dream";
 
 	n(message);
-	j("So his entire redemption story was a lie?");
-	n("A big fat lie.");
-	j("You're a bit of a downer, aren't you?");
+	j("Why do you say that?");
+	n("My parents.");
+	j("Wait, you didn’t tell them, right?");
 
 	Choose({
-		"Yup, I'm just a sad sack of sadness.": Sadsack,
-		"Sometimes... but not when I'm with you.": function(message){
+		"Hey, how can I tell them.": Sadsack,
+		"I told them what I want.": function(message){
 			$.im_a_poet = true;
 
 			n(message);
-			j("Ah Nicky, you amateur poet.");
-			n("Get me some french breads and wine,");
-			n("Coz that's got to be the cheesiest thing I've ever said.");
-			j("Apologize for nothing.");
-			n("Anywho...");
+			j("Did they support you?");
+			n("I’m kidding. I dare not to tell them,");
+			n("Coz they still want me to enter the Medical Schools.");
+			j("Sorry for that.");
+			n("It’s ok.");
 			Thanks();
 		},
-		"I'm just a realist.": function(message){
+		"There is no solusion…": function(message){
 			$.hippies = true;
 
 			n(message);
@@ -142,7 +142,7 @@ function Inception_Neither(message){
 }
 
 function Sadsack(message){
-	
+
 	$.sadsack = true;
 
 	n(message);
@@ -154,7 +154,7 @@ function Sadsack(message){
 }
 
 function Thanks(){
-	
+
 	n("So yeah! Thanks for taking me out to watch Inception!");
 	j("My pleasure, Nicky.");
 	j("You should parody Inception in that odd web game of yours!");
@@ -233,7 +233,7 @@ function Hiding(){
 }
 
 function Hiding_2(message){
-	
+
 	n(message);
 
 	if($.coming_out_readiness=="no"){
@@ -272,7 +272,7 @@ function Hiding_2(message){
 }
 
 function Hiding_3(message){
-	
+
 	n(message);
 	j(". . .");
 	n("I don't want to freak them out too much.");
