@@ -1,0 +1,19 @@
+{
+  "name": "mygame",
+  "version": "1.0.0",
+  "description": "**Coming Out Simulator 2014**     a half-true game about half-truths.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaiwenlai/mygame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaiwenlai/mygame/issues"
+  },
+  "homepage": "https://github.com/kaiwenlai/mygame#readme"
+}
